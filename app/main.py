@@ -5,7 +5,7 @@ import json
 
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
-app._static_folder = os.path.abspath("templates/static/")
+app._static_folder = "templates/static/"
 
 @app.route('/')
 def home():
