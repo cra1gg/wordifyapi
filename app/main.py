@@ -1,16 +1,15 @@
 import flask
-from flask import request, jsonify
+from flask import request, jsonify, render_template
 import json
 
 
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
-
+app._static_folder = os.path.abspath("templates/static/")
 
 @app.route('/')
 def home():
-    return '''<h1>Distant Reading Archive</h1>
-<p>A prototype API for distant reading of science fiction novels.</p>'''
+    return render_template("index.html")
 
 
 # A route to return all of the available entries in our catalog.
