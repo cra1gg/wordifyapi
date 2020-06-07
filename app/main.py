@@ -1,11 +1,14 @@
 import flask
 from flask import request, jsonify, render_template
 import json
+from flask import Flask
+from flask_cors import CORS
 
 
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 app._static_folder = "templates/static/"
+CORS(app)
 
 @app.route('/')
 def home():
