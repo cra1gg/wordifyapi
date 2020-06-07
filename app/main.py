@@ -21,4 +21,4 @@ def api_all():
     returnlst.append(lst.pop(0).rstrip("\n"))
     f2 = open("output.txt", "w")
     f2.writelines(lst)
-    return json.dumps(returnlst)
+    return jsonify(returnlst)
