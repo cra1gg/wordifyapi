@@ -7,7 +7,7 @@ app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 
 
-@app.route('/', methods=['GET'])
+@app.route('/')
 def home():
     return '''<h1>Distant Reading Archive</h1>
 <p>A prototype API for distant reading of science fiction novels.</p>'''
@@ -23,5 +23,3 @@ def api_all():
     f2 = open("output.txt", "w")
     f2.writelines(lst)
     return json.dumps(returnlst)
-
-app.run()
