@@ -1,4 +1,0 @@
-Flask==1.1.2
-gunicorn==20.0.4
-Flask-Cors==3.0.8
-tinydb==4.1.1

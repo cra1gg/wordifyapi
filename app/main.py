@@ -4,13 +4,15 @@ import json
 from flask import Flask
 from flask_cors import CORS
 from tinydb import TinyDB, Query
+from threading import Thread
 
 
-
-app = flask.Flask(__name__)
-app.config["DEBUG"] = True
+app = Flask('')
 app._static_folder = "templates/static/"
 CORS(app)
+
+def run():
+  app.run(host='0.0.0.0',port=8080)
 
 @app.route('/')
 def home():
@@ -33,3 +35,7 @@ def api_all():
     returnlst = []
     returnlst.append(word)
     return jsonify(returnlst)
+
+def keep_alive():  
+    t = Thread(target=run)
+    t.start()

@@ -1,4 +1,5 @@
-from app.main import app 
-  
+from app.main import keep_alive
+
 if __name__ == "__main__": 
-        app.run() 
+        keep_alive()
+        
