@@ -7,7 +7,7 @@ authors = ["repl.it user <replituser@example.com>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 tinydb = "^4.1"
-flask = "^1.1"
+flask = "^2.3"
 flask-cors = "^3.0"
 
 [tool.poetry.dev-dependencies]
